@@ -1,0 +1,22 @@
+from flask import Flask, render_template, request, jsonify
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return render_template('dashboard.html')
+
+@app.route('/api/data/sqlite')
+def get_data_sqlite():
+    # Lógica para obtener datos de SQLite
+    pass
+
+@app.route('/api/data/supabase')
+def get_data_supabase():
+    # Lógica para obtener datos de Supabase
+    pass
+
+@app.route('/api/data/google')
+def get_data_google():
+    # Lógica para obtener datos de Google Spreadsheet
+    pass
